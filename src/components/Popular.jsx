@@ -51,11 +51,11 @@ const Popular = () => {
 };
 
 const Wrapper = styled.div`
-  margin: 4 rem 0rem;
+  margin: 4rem 0rem;
 `;
 const Card = styled.div`
   min-height: 25rem;
-  bordee-radius: 2rem;
+  border-radius: 2rem;
   overflow: hidden;
   position: relative;
   img {

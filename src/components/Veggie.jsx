@@ -22,11 +22,11 @@ const Veggie = () => {
   };
   return (
     <div>
-      <h3>Veggie Picks</h3>
+      <h3>Our Veggie Picks</h3>
       <Wrapper>
         <Splide
           options={{
-            perPage: 4,
+            perPage: 3,
             arrows: false,
             pagination: false,
             drag: 'free',
@@ -51,11 +51,11 @@ const Veggie = () => {
 };
 
 const Wrapper = styled.div`
-  margin: 4 rem 0rem;
+  margin: 4rem 0rem;
 `;
 const Card = styled.div`
   min-height: 25rem;
-  bordee-radius: 2rem;
+  border-radius: 2rem;
   overflow: hidden;
   position: relative;
   img {
