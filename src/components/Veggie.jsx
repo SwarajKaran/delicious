@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
-
 const Veggie = () => {
   const [veggie, setVeggie] = useState([]);
   useEffect(() => {
@@ -14,7 +13,7 @@ const Veggie = () => {
       setVeggie(JSON.parse(check));
     } else {
       const api = await fetch(
-        `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9&tags=vegeterian`
+        `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9&diet=vegetarian`
       );
       const data = await api.json();
       localStorage.setItem('veggie', JSON.stringify(data.recipes));
@@ -23,11 +22,11 @@ const Veggie = () => {
   };
   return (
     <div>
-      <h3>Vegeterian Picks</h3>
+      <h3>Veggie Picks</h3>
       <Wrapper>
         <Splide
           options={{
-            perPage: 3,
+            perPage: 4,
             arrows: false,
             pagination: false,
             drag: 'free',
@@ -56,7 +55,7 @@ const Wrapper = styled.div`
 `;
 const Card = styled.div`
   min-height: 25rem;
-  border-radius: 2rem;
+  bordee-radius: 2rem;
   overflow: hidden;
   position: relative;
   img {
@@ -92,4 +91,5 @@ const Gradient = styled.div`
   height: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
 `;
+
 export default Veggie;
