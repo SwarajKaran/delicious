@@ -19,10 +19,12 @@ const Searched = () => {
   return (
     <Grid>
       {searchedRecipes.map((item) => {
-        <Card key={item.id}>
-          <img src={item.image} alt="" />
-          <h4>{item.title}</h4>
-        </Card>;
+        return (
+          <Card key={item.id}>
+            <img src={item.image} alt="" />
+            <h4>{item.title}</h4>
+          </Card>
+        );
       })}
     </Grid>
   );
