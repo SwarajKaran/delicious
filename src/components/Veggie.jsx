@@ -54,10 +54,10 @@ const Veggie = () => {
 };
 
 const Wrapper = styled.div`
-  margin: 4rem 0rem;
+  margin: 3rem 0rem;
 `;
 const Card = styled.div`
-  min-height: 25rem;
+  min-height: 15rem;
   border-radius: 2rem;
   overflow: hidden;
   position: relative;
@@ -80,7 +80,7 @@ const Card = styled.div`
     text-align: center;
     font-weight: 600;
     font-size: 1rem;
-    height: 40%;
+    height: 35%;
     display: flex;
     justify-content: center;
     align-items: center;
